@@ -18,7 +18,9 @@ public class mainEnviar extends AppCompatActivity {
         Bundle bundle = this.getIntent().getExtras();
 
         //Construimos el mensaje a mostrar
-        txtSaludo.setText("Hola!, Bienvenido \n " + bundle.getString("NOMBRE"));
+        txtSaludo.setText("Hola!, Bienvenido \n " + bundle.getString("NOMBRE")
+                + "\n"+bundle.getString("GENERO")+ "\n"+bundle.getString("FECHA")
+                + "\n"+bundle.getString("TELEFONO"));
 
     }
 }
