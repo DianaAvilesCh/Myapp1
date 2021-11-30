@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void btnEnviar(View view){
-        //Creamos el Intent
+
         Intent intent = new Intent(MainActivity.this, mainEnviar.class);
         EditText txtNombre = (EditText)findViewById(R.id.txtNombre);
         EditText txtTel = (EditText)findViewById(R.id.txtTelefono);
         EditText txtFecha = (EditText)findViewById(R.id.txtFecha);
-        //Creamos la información a pasar entre actividades - Pares Key-Value
+
         RadioGroup rgGenero = (RadioGroup) findViewById(R.id.rgGenero);
 
         Bundle b = new Bundle();
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         b.putString("GENERO", texto);
         b.putString("TELEFONO", txtTel.getText().toString());
         b.putString("FECHA", txtFecha.getText().toString());
-        //Añadimos la información al intent
-        intent.putExtras(b);    // Iniciamos la nueva actividad
+
+        intent.putExtras(b);
         startActivity(intent);
     }
 }
